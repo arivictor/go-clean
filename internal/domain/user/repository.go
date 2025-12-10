@@ -1,4 +1,4 @@
-package user
+package domain
 
 // Repository defines the interface for User persistence
 // This belongs to the domain layer but implementations are in infrastructure
