@@ -26,7 +26,6 @@ type CreatUserResponse struct {
 func CreatUserRoute(request CreateUserRequest) CreatUserResponse {
 	userRepo := infrastructure.NewUserRepository()
 
-	// Application Layer: Initialize use case with dependencies
 	createUserUC := application.NewCreateUserUseCase(userRepo)
 
 	// Execute use case

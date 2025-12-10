@@ -18,12 +18,10 @@ func NewCreateUserUseCase(userRepo domain.Repository) *CreateUserUseCase {
 
 // Execute performs the user creation use case
 func (uc *CreateUserUseCase) Execute(name, email string) error {
-	// Create user entity with validation
 	newUser, err := domain.NewUser(name, email)
 	if err != nil {
 		return err
 	}
 
-	// Persist the user
 	return uc.userRepo.Save(newUser)
 }

@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	// Infrastructure Layer: Initialize repository
 	name := "Ari"
 	email := "ari@ari.com"
 	response := api.CreatUserRoute(api.CreateUserRequest{Name: name, Email: email})
